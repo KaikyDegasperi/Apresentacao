@@ -4,6 +4,13 @@
    padding: 0;
    box-sizing: border-box; 
 }
+:root{
+    --color-1:#222222;
+    --color-2:#005f6b;
+    --color-3:#008c9e;
+    --color-4:#00b4cc;
+    --color-5:#00dffc;
+}
 body{
     display: flex;
     flex-direction: column;
@@ -11,6 +18,9 @@ body{
     align-items: center;
     font-family: 'Big Shoulders Stencil Display', cursive;
     font-family: 'Roboto', sans-serif;
+    background-color: var(--color-1);
+    height: 100vh;
+    color: var(--color-2);
 }
 main{
     width: 80%;
@@ -28,7 +38,7 @@ main{
     margin: 20px;
 }
 .box{
-    border: 1px solid blue;
+    border: 1px solid var(--color-2);
     border-radius: 1em;
     padding: 20px;
     margin-bottom: 1em;
@@ -48,21 +58,73 @@ main{
 }
 a{
     text-decoration: none;
+    color: var(--color-2);
 }
 .box:hover{
     transform: scale(1.1);
 }
 #photo{
-    background-color: blue;
-    width: 9em;
-    height: 20vh;
+    
     border-radius: 100%;
-    border:5px double orangered;
+    border:5px double var(--color-1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#photo>img{
+    
+    border-radius: 100%;
 }
 @media (min-width:500px) {
     .container{
         display: flex;
         flex-direction: column;
         width: 40%;
+    }
+    #photo{
+        width:11em;
+        height: 10.2em;
+        border-radius: 100%;
+        border:5px double var(--color-3);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    #photo>img{
+        height: 100%;
+        width:95%;
+        border-radius: 100%;
+    }
+}
+@media (max-width:900px) {
+    #photo{
+        width: 10.5em;
+        height: 9.9em;
+        border-radius: 100%;
+        border:5px double var(--color-3);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    #photo>img{
+        height: 9.2em;
+        width:10em;
+        border-radius: 100%;
+    }
+}
+@media (max-width:450px) {
+    #photo{
+        width: 9.5em;
+        height: 10em;
+        border-radius: 100%;
+        border:7px double var(--color-3);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    #photo>img{
+        height: 9em;
+        width:10em;
+        border-radius:100%;
     }
 }
